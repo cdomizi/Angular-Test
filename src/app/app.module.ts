@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,7 @@ import { CartComponent } from './cart/cart.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
