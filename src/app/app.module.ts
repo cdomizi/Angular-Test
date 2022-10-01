@@ -5,18 +5,20 @@ import { CookieService } from 'ngx-cookie-service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
+import { TicketsComponent } from './tickets/tickets.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CartComponent
+    CartComponent,
+    TicketsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [CookieService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, CartComponent]
 })
 export class AppModule { }
