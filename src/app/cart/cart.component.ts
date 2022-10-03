@@ -1,3 +1,4 @@
+import { ɵparseCookieValue } from '@angular/common';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -8,12 +9,12 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class CartComponent implements OnInit {
 
-  cookieValue: string | null = null;
+  cookieValue;
 
   constructor(private cookieService: CookieService) {
     this.cookieService.set(
       'CartCounter',
-      this.cookieValue = this.cookieValue ?? '0',
+      '0',
       { expires: new Date(new Date().getTime() +  1000 * 60 * 30),
         path: '/',
         secure: true
