@@ -10,12 +10,17 @@ import { CookieService } from 'ngx-cookie-service';
 export class CartComponent implements OnInit {
 
   cookieValue;
+  initValue = document.cookie
+      .split('; ')
+      .find((row) => row.startsWith('CartCounter='))
+      ?.split('=')[1]
+      ?? '0';
 
   constructor(private cookieService: CookieService) {
     this.cookieService.set(
       'CartCounter',
-      '0',
-      { expires: new Date(new Date().getTime() +  1000 * 60 * 30),
+      this.initValue,
+      { 
         path: '/',
         secure: true
       });

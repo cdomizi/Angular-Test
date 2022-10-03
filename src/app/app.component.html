@@ -1,44 +1,44 @@
 <div class="container-fluid bg-dark" id="header">
     <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
-            <div class="container-fluid text-white">
-                <div class="collapse navbar-collapse  flex-grow-0" id="navbarText">
-                    <ul class="navbar-nav me-0 mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/tickets">Tickets</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex ms-0" role="search">
-                        <input class="form-control me-2 bg-dark" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light border-0" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </form>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand fs-3 fw-bold m-auto position-absolute position-absolute top-0 start-50 translate-middle-x" href="#">Ticketing System</a>
-                <span class="me-0">
-                    <app-cart></app-cart>
-                    <span><i class="fas fa-shopping-cart fa "></i></span>
-                </span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
+        <div class="container-fluid text-white">
+            <div class="collapse navbar-collapse  flex-grow-0" id="navbarText">
+                <ul class="navbar-nav me-0 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/tickets">Tickets</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-0" role="search">
+                    <input class="form-control me-2 bg-dark" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light border-0" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
             </div>
-        </nav>
-    </div>
-    
-    <div class="container-fluid m-auto px-auto py-5" id="page-content">
-        <!-- Main Container -->
-        <div class="container mx-2 px-2" id="main-container">
-    
-            <router-outlet></router-outlet>
-    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand fs-3 fw-bold m-auto position-absolute position-absolute top-0 start-50 translate-middle-x" href="#">Ticketing System</a>
+            <span class="me-0">
+                <app-cart></app-cart>
+                <span><i class="fas fa-shopping-cart fa "></i></span>
+            </span>
         </div>
-    </div>
+    </nav>
+</div>
+    
+<div class="container-fluid m-auto px-auto py-5" id="page-content">
+    <!-- Main Container -->
+    <div class="container mx-2 px-2" id="main-container">
 
-    <!-- Footer -->
-    <div class="container-fluid mx-auto my-0 p-auto py-5 bg-dark text-center text-white align-center" id="footer">
-        <div class="container" id="footer-content">
-            Copyright © 2022
-        </div>
+        <router-outlet></router-outlet>
+
     </div>
+</div>
+
+<!-- Footer -->
+<div class="container-fluid mx-auto my-0 p-auto py-5 bg-dark text-center text-white align-center" id="footer">
+    <div class="container" id="footer-content">
+        Copyright © 2022
+    </div>
+</div>
