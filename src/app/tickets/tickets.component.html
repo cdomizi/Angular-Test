@@ -1,0 +1,13 @@
+<h2>All Tickets</h2>
+
+<ul class="tickets">
+    <li *ngFor="let ticket of tickets">
+    <button [class.selected]="ticket === selectedTicket" type="button" (click)="onSelect(ticket)">
+      <span class="badge">{{ticket.id}}</span>
+      <span class="field">{{ticket.firstName}}</span>
+      <span class="field">{{ticket.lastName}}</span>
+    </button>
+  </li>
+</ul>
+
+<app-ticket-detail [ticket]="selectedTicket"></app-ticket-detail>

@@ -1,0 +1,8 @@
+<div *ngIf="ticket">
+    <h2>{{ticket.firstName | uppercase}} {{ticket.lastName | uppercase}} Details</h2>
+    <div><span>id: </span>{{ticket.id}}</div>
+    <div>
+        <label for="ticket-email">Email: </label>
+        <input id="ticket-email" [(ngModel)]="ticket.email" placeholder="email">
+    </div>
+</div>
