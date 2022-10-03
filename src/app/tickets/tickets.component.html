@@ -2,10 +2,10 @@
 
 <ul class="tickets">
     <li *ngFor="let ticket of tickets">
-    <button [class.selected]="ticket === selectedTicket" type="button" (click)="onSelect(ticket)">
-      <span class="badge">{{ticket.id}}</span>
-      <span class="field">{{ticket.firstName}}</span>
-      <span class="field">{{ticket.lastName}}</span>
+    <button class="btn btn-dark my-1" [class.selected]="ticket === selectedTicket" type="button" (click)="onSelect(ticket)">
+      <span class="badge text-secondary">{{ticket.id}}</span>
+      <span class="ms-1">{{ticket.firstName}}</span>
+      <span class="ms-1">{{ticket.lastName}}</span>
     </button>
   </li>
 </ul>

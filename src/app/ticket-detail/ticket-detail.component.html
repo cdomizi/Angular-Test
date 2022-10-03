@@ -1,8 +1,8 @@
 <div *ngIf="ticket">
     <h2>{{ticket.firstName | uppercase}} {{ticket.lastName | uppercase}} Details</h2>
     <div><span>id: </span>{{ticket.id}}</div>
-    <div>
-        <label for="ticket-email">Email: </label>
-        <input id="ticket-email" [(ngModel)]="ticket.email" placeholder="email">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="ticket-email">Email:</span>
+        <input type="text" class="form-control" [(ngModel)]="ticket.email" placeholder="user@email.ext" aria-label="email" aria-describedby="email">
     </div>
 </div>
