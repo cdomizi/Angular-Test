@@ -1,8 +1,5 @@
-<div id="cart">
-    Cart items:
+<button type="button" class="btn btn-light mx-2" (click)="incrementCount()">Increment</button>
+
+<span id="cartItems" class="badge badge-pill bg-danger">
     <span #cartItems>{{cookieValue}}</span>
-  
-</div>
-  
-<button type="button" class="btn btn-light" (click)="incrementCount()">Increment</button>
-  
+</span>
