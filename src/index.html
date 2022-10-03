@@ -15,29 +15,29 @@
 
   <div class="container-fluid bg-dark" id="header">
     <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-relative">
             <div class="container-fluid text-white">
-                <a class="navbar-brand fs-3 fw-bold" href="#">Ticketing System</a>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse  flex-grow-0" id="navbarText">
+                    <ul class="navbar-nav me-0 mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="./index.html">Home</a>
                         </li>
                     </ul>
-                    <form class="d-flex me-0 pe-0" role="search">
+                    <form class="d-flex ms-0" role="search">
                         <input class="form-control me-2 bg-dark" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-light border-0" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
                 </div>
-                <div class="me-2">
-                        <app-cart></app-cart>
-                    <span><i class="fas fa-shopping-cart fa-2x"></i></span>
-                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a class="navbar-brand fs-3 fw-bold m-auto position-absolute position-absolute top-0 start-50 translate-middle-x" href="#">Ticketing System</a>
+                <span class="me-0">
+                    <app-cart></app-cart>
+                    <span><i class="fas fa-shopping-cart fa "></i></span>
+                </span>
             </div>
         </nav>
     </div>
