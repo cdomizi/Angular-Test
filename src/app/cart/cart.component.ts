@@ -8,12 +8,12 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class CartComponent implements OnInit {
 
-  cookieValue;
+  cookieValue: string | null = null;
 
   constructor(private cookieService: CookieService) {
     this.cookieService.set(
       'CartCounter',
-      '0',
+      this.cookieValue = this.cookieValue ?? '0',
       { expires: new Date(new Date().getTime() +  1000 * 60 * 30),
         path: '/',
         secure: true
@@ -24,9 +24,6 @@ export class CartComponent implements OnInit {
   @ViewChild('cartItems') cartItems!: ElementRef;
 
   incrementCount(): any {
-    // let counter: number = this.cartItems.nativeElement.innerText;
-    // counter ++;
-    // console.warn(counter);
     let counter: any = this.cookieValue;
     counter = parseInt(counter);
     counter++;
